@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lénárd Kávai — Lenny Production</title>
+<meta name="description" content="Lénárd Kávai — music producer & session guitarist. Music by order, mixing, session guitar, full production. Lenny Production studio.">
+<meta property="og:title" content="Lénárd Kávai — Music Producer & Session Guitarist">
+<meta property="og:description" content="Get your music ideas come to life. 🪄 Music by order · Mixing · Session guitar">
+<meta property="og:image" content="https://gajdos03.github.io/lenardkavai/img/photo-2022b.jpg">
+<meta property="og:url" content="https://gajdos03.github.io/lenardkavai/">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b10; --bg2:#13131b; --card:#181823; --line:#2a2a3a;
+  --text:#f2f1f7; --muted:#9a98ad;
+  --lime:#c8ff3d; --violet:#8b5cff; --pink:#ff4fa3;
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:Unbounded,sans-serif;line-height:1.05;letter-spacing:-.02em}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--lime);font-weight:700}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px var(--lime)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;border:1.5px solid var(--line);transition:.25s;cursor:pointer;font-family:inherit;font-size:1rem;background:transparent;color:var(--text)}
+.btn:hover{border-color:var(--text);transform:translateY(-2px)}
+.btn.primary{background:var(--lime);color:#0b0b10;border-color:var(--lime)}
+.btn.primary:hover{box-shadow:0 10px 40px -8px var(--lime)}
+
+/* NAV */
+nav{position:fixed;inset:14px 0 auto;z-index:50}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 8px 8px 10px;background:rgba(19,19,27,.72);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px}
+.logo{font-family:Unbounded;font-weight:800;font-size:1rem;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.logo img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.logo span{color:var(--lime)}
+.navlinks{display:flex;gap:22px;font-size:.9rem;color:var(--muted)}
+.navlinks a:hover{color:var(--text)}
+.nav-r{display:flex;align-items:center;gap:8px}
+.lang{display:flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang button{background:none;border:0;color:var(--muted);font:700 .75rem "Space Grotesk";padding:7px 10px;border-radius:999px;cursor:pointer}
+.lang button.on{background:var(--text);color:#0b0b10}
+nav .btn{padding:10px 16px;font-size:.85rem}
+@media(max-width:960px){.navlinks{display:none}}
+@media(max-width:520px){nav .btn{display:none}.logo b{display:none}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:130px 0 80px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;pointer-events:none}
+.b1{width:520px;height:520px;background:var(--violet);top:-120px;right:-120px;animation:float 12s ease-in-out infinite}
+.b2{width:380px;height:380px;background:var(--pink);bottom:-140px;left:-100px;opacity:.35;animation:float 15s ease-in-out infinite reverse}
+@keyframes float{50%{transform:translate(-40px,40px) scale(1.08)}}
+.hero-grid{display:grid;grid-template-columns:1.2fr .9fr;gap:50px;align-items:center;position:relative}
+.hero h1{font-size:clamp(2.7rem,7.4vw,6.2rem);font-weight:800;margin:22px 0}
+.hero h1 .out{-webkit-text-stroke:2px var(--text);color:transparent}
+.hero h1 .hl{color:var(--lime)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:540px;margin-bottom:34px}
+.hero p.lead b{color:var(--text)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.roles{display:flex;gap:8px;flex-wrap:wrap;margin-top:34px}
+.chip{padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted);background:var(--bg2)}
+
+.player{background:linear-gradient(160deg,#1d1b2b,#121219);border:1px solid var(--line);border-radius:28px;padding:18px;position:relative;box-shadow:0 30px 80px -30px rgba(139,92,255,.6);transform:rotate(2deg)}
+.cover{aspect-ratio:1;border-radius:18px;overflow:hidden;position:relative}
+.cover img{width:100%;height:100%;object-fit:cover}
+.cover .vinyl{position:absolute;right:-30px;bottom:-30px;width:120px;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#1c1c1c 2px 4px);animation:spin 5s linear infinite;box-shadow:0 0 0 5px rgba(0,0,0,.3)}
+.cover .vinyl::after{content:"";position:absolute;inset:36%;border-radius:50%;background:var(--lime)}
+.live{position:absolute;left:12px;top:12px;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);padding:6px 11px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.1em;display:flex;gap:7px;align-items:center}
+.live::before{content:"";width:7px;height:7px;border-radius:50%;background:#ff3b3b;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.2}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.track{margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:0 6px}
+.track b{font-family:Unbounded;font-size:.95rem}
+.track small{color:var(--muted);display:block}
+.play{width:50px;height:50px;flex:none;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:#000;border:0;cursor:pointer;font-weight:700}
+.eq{display:flex;align-items:flex-end;gap:4px;height:40px;margin:14px 6px 6px}
+.eq i{flex:1;background:linear-gradient(var(--lime),var(--violet));border-radius:3px;animation:eq 1.1s ease-in-out infinite}
+@keyframes eq{0%,100%{height:15%}50%{height:100%}}
+.player.paused .eq i,.player.paused .vinyl{animation-play-state:paused}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.player{max-width:400px;transform:none}}
+
+.marquee{border-block:1px solid var(--line);background:var(--lime);color:#0b0b10;overflow:hidden;transform:rotate(-1.5deg);margin:10px -20px}
+.marquee-track{display:flex;gap:40px;padding:16px 0;white-space:nowrap;animation:marq 30s linear infinite;width:max-content;font-family:Unbounded;font-weight:800;font-size:1.3rem;text-transform:uppercase}
+.marquee-track span::after{content:"✦";margin-left:40px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:50px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;margin-top:14px}
+.sec-head p{color:var(--muted);max-width:430px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+.about-photo{border-radius:26px;overflow:hidden;position:relative;aspect-ratio:4/5}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:45% center}
+.about-photo .cap{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(11,11,16,.7);backdrop-filter:blur(8px);border-radius:16px;padding:12px 16px;font-size:.9rem}
+.about-text{font-size:1.1rem;color:var(--muted)}
+.about-text p+p{margin-top:16px}
+.about-text b{color:var(--text)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.stat .n{font-family:Unbounded;font-weight:800;font-size:2rem;color:var(--lime)}
+.stat .l{color:var(--muted);font-size:.9rem}
+.stat.v .n{color:var(--violet)} .stat.p .n{color:var(--pink)}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}.about-photo{aspect-ratio:4/3}}
+
+/* WORK */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.work{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.3s;display:flex;flex-direction:column;cursor:pointer;text-align:left;color:inherit;font:inherit;padding:0}
+.work:hover{transform:translateY(-6px);border-color:var(--violet)}
+.work .art{aspect-ratio:4/3;position:relative;overflow:hidden;background:#000}
+.work .art img{width:100%;height:100%;object-fit:cover;transition:.5s;opacity:.85}
+.work:hover .art img{transform:scale(1.06);opacity:1}
+.work .art::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,.6))}
+.work .pbtn{position:absolute;right:14px;bottom:14px;width:46px;height:46px;border-radius:50%;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);display:grid;place-items:center;transition:.25s;z-index:1}
+.work:hover .pbtn{background:var(--lime);color:#000}
+.work .type{position:absolute;left:14px;top:14px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;background:rgba(0,0,0,.6);padding:6px 10px;border-radius:999px;font-weight:700;z-index:1}
+.work .body{padding:20px 22px 24px}
+.work h3{font-size:1.02rem;margin-bottom:8px}
+.work p{color:var(--muted);font-size:.93rem}
+.work .meta{margin-top:14px;font-size:.8rem;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}
+.work .meta span{border:1px solid var(--line);padding:3px 9px;border-radius:999px}
+@media(max-width:980px){.works{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.works{grid-template-columns:1fr}}
+
+/* COLLABS */
+.collabs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.collab{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:var(--bg2);transition:.25s}
+.collab:hover{border-color:var(--lime)}
+.collab small{color:var(--lime);font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.collab h3{font-size:1rem;margin:10px 0 6px}
+.collab p{color:var(--muted);font-size:.9rem}
+@media(max-width:900px){.collabs{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.collabs{grid-template-columns:1fr}}
+
+/* MMNW feature */
+.feature{display:grid;grid-template-columns:1.1fr 1fr;border-radius:30px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.feature img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.feature .txt{padding:44px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+.feature h2{font-size:clamp(1.7rem,3.6vw,2.6rem)}
+.feature p{color:var(--muted)}
+.feature blockquote{border-left:3px solid var(--pink);padding-left:16px;font-style:italic;color:var(--text)}
+@media(max-width:860px){.feature{grid-template-columns:1fr}.feature .txt{padding:28px}}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.svc .ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;background:var(--card);border:1px solid var(--line);margin-bottom:18px}
+.svc h3{font-size:1.02rem;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:.93rem}
+@media(max-width:980px){.services{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.services{grid-template-columns:1fr}}
+
+/* PACKAGES */
+#csomagok{background:var(--bg2);border-block:1px solid var(--line)}
+.packs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
+.pack{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:28px;display:flex;flex-direction:column;position:relative}
+.pack.hot{border-color:var(--lime);background:linear-gradient(180deg,rgba(200,255,61,.09),var(--card) 40%)}
+.pack .badge{position:absolute;top:-13px;left:28px;background:var(--lime);color:#000;font-weight:700;font-size:.72rem;padding:5px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em}
+.pack h3{font-size:1.2rem}
+.pack .for{color:var(--muted);font-size:.9rem;margin:8px 0 20px;min-height:3em}
+.pack .price{font-family:Unbounded;font-weight:800;font-size:2.4rem}
+.pack .price small{font-size:.85rem;color:var(--muted);font-weight:400;font-family:"Space Grotesk"}
+.pack ul{list-style:none;margin:20px 0 26px;display:grid;gap:10px;flex:1;align-content:start}
+.pack li{display:flex;gap:10px;font-size:.93rem}
+.pack li::before{content:"✓";color:var(--lime);font-weight:700}
+.pack .btn{justify-content:center}
+.note{color:var(--muted);font-size:.88rem;margin-top:26px;text-align:center}
+.note a{color:var(--lime)}
+@media(max-width:1080px){.packs{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.packs{grid-template-columns:1fr}}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+.step{border-top:2px solid var(--line);padding-top:22px;counter-increment:s}
+.step::before{content:"0" counter(s);font-family:Unbounded;font-weight:800;color:var(--violet);font-size:1.6rem;display:block;margin-bottom:10px}
+.step h3{font-size:1rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.93rem}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr}}
+
+/* STUDIO */
+.studio-gal{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;margin-bottom:14px}
+.studio-gal figure{border-radius:22px;overflow:hidden;position:relative;aspect-ratio:1}
+.studio-gal figure:first-child{aspect-ratio:auto;grid-row:span 1}
+.studio-gal img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.studio-gal figure:hover img{transform:scale(1.05)}
+.studio-gal figcaption{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);padding:6px 12px;border-radius:999px;font-size:.8rem;font-weight:600}
+.gear{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.g{border:1px solid var(--line);border-radius:18px;padding:18px;background:var(--bg2)}
+.g small{color:var(--lime);text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:700}
+.g b{display:block;font-family:Unbounded;font-size:.88rem;margin-top:8px}
+@media(max-width:900px){.gear{grid-template-columns:1fr 1fr 1fr}.studio-gal{grid-template-columns:1fr 1fr}.studio-gal figure:first-child{grid-column:span 2;aspect-ratio:16/10}}
+@media(max-width:520px){.gear{grid-template-columns:1fr 1fr}}
+
+/* LIVE STRIP */
+.livebanner{position:relative;border-radius:30px;overflow:hidden;min-height:380px;display:flex;align-items:flex-end}
+.livebanner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.livebanner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,16,.92),rgba(11,11,16,.2))}
+.livebanner .txt{position:relative;z-index:1;padding:44px;max-width:560px}
+.livebanner h2{font-size:clamp(1.7rem,4vw,2.8rem);margin:12px 0}
+.livebanner p{color:#d6d4e2;margin-bottom:22px}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px}
+.contact-card{background:linear-gradient(150deg,var(--violet),#4b23b8);border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:18px;justify-content:space-between}
+.contact-card .me{display:flex;align-items:center;gap:14px}
+.contact-card .me img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--lime)}
+.contact-card h3{font-size:clamp(1.5rem,3.2vw,2.2rem)}
+.contact-card a.line{display:flex;align-items:center;gap:14px;background:rgba(0,0,0,.2);padding:14px 18px;border-radius:16px;font-weight:600;transition:.2s}
+.contact-card a.line:hover{background:rgba(0,0,0,.35)}
+form{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px;display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:.85rem;color:var(--muted);display:grid;gap:7px}
+input,textarea{background:var(--bg);border:1px solid var(--line);color:var(--text);border-radius:14px;padding:14px 16px;font:inherit;font-size:1rem;width:100%}
+input:focus,textarea:focus{outline:none;border-color:var(--lime)}
+textarea{min-height:120px;resize:vertical}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills input{display:none}
+.pills label{display:inline-block;padding:9px 14px;border:1px solid var(--line);border-radius:999px;cursor:pointer;color:var(--text);font-size:.9rem;transition:.2s}
+.pills input:checked+label{background:var(--lime);color:#000;border-color:var(--lime)}
+.send{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:860px){.contact,.row{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a:hover{color:var(--lime)}
+
+.modal{position:fixed;inset:0;background:rgba(5,5,8,.85);backdrop-filter:blur(8px);display:none;place-items:center;z-index:100;padding:16px}
+.modal.open{display:grid}
+.modal-box{width:min(420px,100%);background:var(--card);border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.modal-box iframe{width:100%;height:min(640px,75vh);border:0;background:#fff}
+.modal-bar{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;gap:10px}
+.modal-bar a{color:var(--lime);font-size:.9rem;font-weight:600}
+.x{background:none;border:0;color:var(--text);font-size:1.6rem;cursor:pointer;line-height:1}
+
+.reveal{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><img src="img/logo.jpg" alt="Lenny Production"><b>LENNY<span>PROD</span></b></a>
+    <div class="navlinks">
+      <a href="#rolam" data-i="nav.about"></a>
+      <a href="#munkak" data-i="nav.work"></a>
+      <a href="#csomagok" data-i="nav.packs"></a>
+      <a href="#studio" data-i="nav.studio"></a>
+      <a href="#kapcsolat" data-i="nav.contact"></a>
+    </div>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-l="hu">HU</button><button data-l="sr">SR</button><button data-l="en">EN</button>
+      </div>
+      <a href="#kapcsolat" class="btn primary" data-i="nav.cta"></a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">Music Producer · Session Guitarist</span>
+      <h1>Lénárd<br><span class="out">Kávai</span><span class="hl">.</span></h1>
+      <p class="lead" data-i="hero.lead"></p>
+      <div class="hero-ctas">
+        <a href="#munkak" class="btn primary" data-i="hero.listen"></a>
+        <a href="#csomagok" class="btn" data-i="hero.packs"></a>
+      </div>
+      <div class="roles">
+        <span class="chip" data-i="chip.1"></span><span class="chip" data-i="chip.2"></span><span class="chip" data-i="chip.3"></span><span class="chip" data-i="chip.4"></span>
+      </div>
+    </div>
+    <div class="player" id="player">
+      <div class="cover">
+        <img src="img/photo-2022b.jpg" alt="Lénárd Kávai" style="object-position:48% center">
+        <span class="live">LIVE</span>
+        <div class="vinyl"></div>
+      </div>
+      <div class="track">
+        <div><b>Lénárd Kávai</b><small data-i="hero.now"></small></div>
+        <button class="play" id="playToggle" aria-label="Pause">❚❚</button>
+      </div>
+      <div class="eq" id="eq"></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Music by order</span><span>Mixing</span><span>Session guitar</span><span>Covers</span><span>Cinematic</span><span>Live</span><span>Logic Pro X</span><span>FL Studio</span>
+    <span>Music by order</span><span>Mixing</span><span>Session guitar</span><span>Covers</span><span>Cinematic</span><span>Live</span><span>Logic Pro X</span><span>FL Studio</span>
+  </div>
+</div>
+
+<section id="rolam">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag" data-i="about.tag"></span><h2 data-i="about.h"></h2></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <img src="img/photo-2022a.jpg" alt="Lénárd Kávai">
+        <div class="cap" data-i="about.cap"></div>
+      </div>
+      <div class="reveal">
+        <div class="about-text">
+          <p data-i="about.p1"></p>
+          <p data-i="about.p2"></p>
+          <p data-i="about.p3"></p>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="n">2</div><div class="l" data-i="stat.1"></div></div>
+          <div class="stat v"><div class="n">1.1K+</div><div class="l" data-i="stat.2"></div></div>
+          <div class="stat p"><div class="n">40+</div><div class="l" data-i="stat.3"></div></div>
+          <div class="stat"><div class="n">2</div><div class="l" data-i="stat.4"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="munkak" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag" data-i="work.tag"></span><h2 data-i="work.h"></h2></div>
+      <p data-i="work.p"></p>
+    </div>
+    <div class="works">
+      <button class="work reveal" data-ig="https://www.instagram.com/reel/DbYK31HsjWL/">
+        <div class="art"><img src="img/triton.jpg" alt="Korg Triton" loading="lazy"><span class="type">Reel · 2026</span><span class="pbtn">▶</span></div>
+        <div class="body"><h3>Korg Triton — Gospodski</h3><p data-i="w1.p"></p><div class="meta"><span data-i="m.keys"></span><span>Sound design</span></div></div>
+      </button>
+      <button class="work reveal" data-ig="https://www.instagram.com/reel/DSiZ25diKvx/">
+        <div class="art"><img src="img/tijana-cover.jpg" alt="Tijana Bogićević cover" loading="lazy"><span class="type">Cover · 2025</span><span class="pbtn">▶</span></div>
+        <div class="body"><h3>Veliki prasak — Bend bez imena</h3><p data-i="w2.p"></p><div class="meta"><span>Session guitar</span><span data-i="m.band"></span></div></div>
+      </button>
+      <button class="work reveal" data-ig="https://www.instagram.com/reel/DSIyBD4jOfc/">
+        <div class="art"><img src="img/serifovic.jpg" alt="Ne voliš je znam cover" loading="lazy"><span class="type">Cover · 2025</span><span class="pbtn">▶</span></div>
+        <div class="body"><h3>Marija Šerifović — Ne voliš je znam</h3><p data-i="w3.p"></p><div class="meta"><span data-i="m.prod"></span><span data-i="m.guitar"></span></div></div>
+      </button>
+      <button class="work reveal" data-ig="https://www.instagram.com/reel/DHGhvAStklf/">
+        <div class="art"><img src="img/tose.jpg" alt="Toše Proeski cover" loading="lazy"><span class="type">Cover · 2025</span><span class="pbtn">▶</span></div>
+        <div class="body"><h3>Toše Proeski — Da l' si srećnija</h3><p data-i="w4.p"></p><div class="meta"><span>Guitar cover</span><span>Drum cover</span></div></div>
+      </button>
+      <button class="work reveal" data-ig="https://www.instagram.com/reel/DF-KGEGyHxT/">
+        <div class="art"><img src="img/cinematic.jpg" alt="Cinematic version" loading="lazy"><span class="type">Cinematic · 2025</span><span class="pbtn">▶</span></div>
+        <div class="body"><h3>Tijana Bogićević — cinematic</h3><p data-i="w5.p"></p><div class="meta"><span data-i="m.arr"></span><span>Cinematic</span></div></div>
+      </button>
+      <button class="work reveal" data-ig="https://www.instagram.com/p/DJPakh6td5g/">
+        <div class="art"><img src="img/mmnw.jpg" alt="Make Music Not War" loading="lazy" style="object-position:80% center"><span class="type">Erasmus+ · 2025</span><span class="pbtn">▶</span></div>
+        <div class="body"><h3>Make Music Not War</h3><p data-i="w6.p"></p><div class="meta"><span data-i="m.intl"></span><span>Live</span></div></div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="egyutt" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag" data-i="col.tag"></span><h2 data-i="col.h"></h2></div>
+      <p data-i="col.p"></p>
+    </div>
+    <div class="collabs">
+      <a class="collab reveal" href="https://www.instagram.com/__bratic/" target="_blank" rel="noopener"><small data-i="col.1s"></small><h3>Dario Bratić</h3><p data-i="col.1p"></p></a>
+      <a class="collab reveal" href="https://www.instagram.com/drumremixforyou/" target="_blank" rel="noopener"><small data-i="col.2s"></small><h3>Drumremixforyou</h3><p data-i="col.2p"></p></a>
+      <a class="collab reveal" href="https://www.instagram.com/tijanabogicevic_music/" target="_blank" rel="noopener"><small data-i="col.3s"></small><h3>Tijana Bogićević</h3><p data-i="col.3p"></p></a>
+      <a class="collab reveal" href="https://www.instagram.com/makemusicnotwar.eu/" target="_blank" rel="noopener"><small>Erasmus+</small><h3>Make Music. Not War.</h3><p data-i="col.4p"></p></a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="feature reveal">
+      <img src="img/mmnw.jpg" alt="Make Music Not War" loading="lazy" style="object-position:85% center">
+      <div class="txt">
+        <span class="tag">Make Music. Not War.</span>
+        <h2 data-i="mm.h"></h2>
+        <p data-i="mm.p"></p>
+        <blockquote data-i="mm.q"></blockquote>
+        <a class="btn" href="https://makemusicnotwar.eu" target="_blank" rel="noopener" style="align-self:flex-start">makemusicnotwar.eu ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="szolgaltatasok" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag" data-i="svc.tag"></span><h2 data-i="svc.h"></h2></div>
+      <p data-i="svc.p"></p>
+    </div>
+    <div class="services">
+      <div class="svc reveal"><div class="ic">🎶</div><h3 data-i="s1.h"></h3><p data-i="s1.p"></p></div>
+      <div class="svc reveal"><div class="ic">🎧</div><h3 data-i="s2.h"></h3><p data-i="s2.p"></p></div>
+      <div class="svc reveal"><div class="ic">🎸</div><h3 data-i="s3.h"></h3><p data-i="s3.p"></p></div>
+      <div class="svc reveal"><div class="ic">🎤</div><h3 data-i="s4.h"></h3><p data-i="s4.p"></p></div>
+      <div class="svc reveal"><div class="ic">🎬</div><h3 data-i="s5.h"></h3><p data-i="s5.p"></p></div>
+      <div class="svc reveal"><div class="ic">🎹</div><h3 data-i="s6.h"></h3><p data-i="s6.p"></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="csomagok">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag" data-i="pk.tag"></span><h2 data-i="pk.h"></h2></div>
+      <p data-i="pk.p"></p>
+    </div>
+    <div class="packs">
+      <div class="pack reveal">
+        <h3>Mix & Master</h3>
+        <p class="for" data-i="pk1.for"></p>
+        <div class="price">€60 <small data-i="per.song"></small></div>
+        <ul data-i="pk1.ul"></ul>
+        <button class="btn" data-pack="mix" data-i="pk.btn"></button>
+      </div>
+      <div class="pack reveal">
+        <h3>Beat / Instrumental</h3>
+        <p class="for" data-i="pk2.for"></p>
+        <div class="price">€120 <small data-i="per.song"></small></div>
+        <ul data-i="pk2.ul"></ul>
+        <button class="btn" data-pack="beat" data-i="pk.btn"></button>
+      </div>
+      <div class="pack hot reveal">
+        <span class="badge" data-i="pk.hot"></span>
+        <h3>Full Production</h3>
+        <p class="for" data-i="pk3.for"></p>
+        <div class="price">€290 <small data-i="per.song"></small></div>
+        <ul data-i="pk3.ul"></ul>
+        <button class="btn primary" data-pack="full" data-i="pk.btn"></button>
+      </div>
+      <div class="pack reveal">
+        <h3>Session Guitar</h3>
+        <p class="for" data-i="pk4.for"></p>
+        <div class="price">€35 <small data-i="per.track"></small></div>
+        <ul data-i="pk4.ul"></ul>
+        <button class="btn" data-pack="guitar" data-i="pk.btn"></button>
+      </div>
+    </div>
+    <p class="note" data-i="pk.note"></p>
+  </div>
+</section>
+
+<section id="folyamat">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="tag" data-i="st.tag"></span><h2 data-i="st.h"></h2></div></div>
+    <div class="steps">
+      <div class="step reveal"><h3 data-i="st1.h"></h3><p data-i="st1.p"></p></div>
+      <div class="step reveal"><h3 data-i="st2.h"></h3><p data-i="st2.p"></p></div>
+      <div class="step reveal"><h3 data-i="st3.h"></h3><p data-i="st3.p"></p></div>
+      <div class="step reveal"><h3 data-i="st4.h"></h3><p data-i="st4.p"></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="studio" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="tag" data-i="sd.tag"></span><h2 data-i="sd.h"></h2></div>
+      <p data-i="sd.p"></p>
+    </div>
+    <div class="studio-gal reveal">
+      <figure><img src="img/studio.jpg" alt="Lenny Production studio" loading="lazy"><figcaption>"The Studio"</figcaption></figure>
+      <figure><img src="img/booth.jpg" alt="Vocal booth" loading="lazy"><figcaption data-i="sd.booth"></figcaption></figure>
+      <figure><img src="img/studio2.jpg" alt="Logic Pro session" loading="lazy"><figcaption>Logic Pro X</figcaption></figure>
+    </div>
+    <div class="gear">
+      <div class="g reveal"><small>DAW</small><b>Logic Pro X</b></div>
+      <div class="g reveal"><small>DAW</small><b>FL Studio 21</b></div>
+      <div class="g reveal"><small data-i="g.mic"></small><b>Universal Audio Sphere LX</b></div>
+      <div class="g reveal"><small>Monitor</small><b>Focal Shape Twin</b></div>
+      <div class="g reveal"><small>Monitor 2</small><b>Yamaha HS7</b></div>
+      <div class="g reveal"><small data-i="g.synth"></small><b>Korg Triton</b></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="livebanner reveal">
+      <img src="img/portrait-2025.jpg" alt="Lénárd Kávai live" loading="lazy" style="object-position:35% center">
+      <div class="txt">
+        <span class="tag">Live</span>
+        <h2 data-i="lv.h"></h2>
+        <p data-i="lv.p"></p>
+        <a href="#kapcsolat" class="btn primary" data-i="lv.btn"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kapcsolat">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="tag" data-i="ct.tag"></span><h2 data-i="ct.h"></h2></div></div>
+    <div class="contact">
+      <div class="contact-card reveal">
+        <div class="me"><img src="img/profile.jpg" alt="Lénárd Kávai"><div><b>Lénárd Kávai</b><br><small>Music Producer · Session Guitarist</small></div></div>
+        <h3 data-i="ct.card"></h3>
+        <div style="display:grid;gap:10px">
+          <a class="line" href="tel:+381653531017">📞 +381 65 353 1017</a>
+          <a class="line" href="https://wa.me/381653531017" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="line" href="https://www.instagram.com/lenardkavai/" target="_blank" rel="noopener">📸 @lenardkavai</a>
+          <a class="line" href="https://www.instagram.com/lennyprod.studio/" target="_blank" rel="noopener">🎹 @lennyprod.studio</a>
+        </div>
+      </div>
+      <form id="form" class="reveal">
+        <div class="row">
+          <label><span data-i="f.name"></span><input name="name" required></label>
+          <label><span data-i="f.contact"></span><input name="contact"></label>
+        </div>
+        <label data-i="f.pack"></label>
+        <div class="pills">
+          <input type="radio" name="pack" id="p-mix" value="mix"><label for="p-mix">Mix & Master</label>
+          <input type="radio" name="pack" id="p-beat" value="beat"><label for="p-beat">Beat</label>
+          <input type="radio" name="pack" id="p-full" value="full" checked><label for="p-full">Full Production</label>
+          <input type="radio" name="pack" id="p-guitar" value="guitar"><label for="p-guitar">Session Guitar</label>
+          <input type="radio" name="pack" id="p-live" value="live"><label for="p-live">Live</label>
+          <input type="radio" name="pack" id="p-custom" value="custom"><label for="p-custom" data-i="f.custom"></label>
+        </div>
+        <div class="row">
+          <label><span data-i="f.genre"></span><input name="genre"></label>
+          <label><span data-i="f.deadline"></span><input name="deadline"></label>
+        </div>
+        <label><span data-i="f.msg"></span><textarea name="msg"></textarea></label>
+        <div class="send">
+          <button class="btn primary" type="submit" data-i="f.wa"></button>
+          <button class="btn" type="button" id="viber" data-i="f.viber"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Lénárd Kávai · Lenny Production</span>
+    <span><a href="https://www.instagram.com/lenardkavai/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.instagram.com/lennyprod.studio/" target="_blank" rel="noopener">Lenny Production</a> · <a href="tel:+381653531017">+381 65 353 1017</a></span>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-bar"><a id="igLink" href="#" target="_blank" rel="noopener" data-i="modal.open"></a><button class="x" id="close" aria-label="Close">×</button></div>
+    <iframe id="frame" title="Instagram" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+const T={
+hu:{
+"nav.about":"Rólam","nav.work":"Munkák","nav.packs":"Csomagok","nav.studio":"Stúdió","nav.contact":"Kapcsolat","nav.cta":"Írj nekem",
+"hero.lead":"Az ötleted megérdemli, hogy <b>tényleg úgy szóljon</b>, ahogy a fejedben hallod. Zene rendelésre, keverés, gitárfelvétel és teljes produkció — a <b>Lenny Production</b> stúdióból. 🪄",
+"hero.listen":"▶ Hallgasd meg a munkáimat","hero.packs":"Csomagok és árak","hero.now":"Producer · gitáros · Lenny Prod",
+"chip.1":"🎧 Keverés","chip.2":"🎸 Session gitár","chip.3":"🎹 Hangszerelés","chip.4":"🎬 Cinematic verziók",
+"about.tag":"Rólam","about.h":"Fiatal fül,<br>komoly hangzás.","about.cap":"👋 Szia, Lénárd vagyok — producer és gitáros.",
+"about.p1":"<b>Zenei producer és session gitáros</b> vagyok. A saját stúdiómban, a <b>Lenny Production</b>-ben dolgozom, ahol egy dúdolt ötletből vagy egy demóból kész, kiadásra kész dal lesz.",
+"about.p2":"Imádom a balkáni pop klasszikusait: készítettem feldolgozást <b>Toše Proeski</b>, <b>Marija Šerifović</b> és <b>Tijana Bogićević</b> dalaiból, a <b>Korg Triton</b>on pedig újraélesztem a „gospodski” korszak hangját. Gitárosként stúdióban és színpadon is játszom más zenészek produkcióiban.",
+"about.p3":"2025-ben a nemzetközi <b>Make Music Not War</b> programon tíz napig zenéltem együtt fiatal zenészekkel Európából és a Közel-Keletről — ez máig az egyik legmeghatározóbb élményem.",
+"stat.1":"szerep: producer és session gitáros","stat.2":"követő az Instagramon","stat.3":"fiatal zenész a Make Music Not War programon","stat.4":"DAW: Logic Pro X és FL Studio",
+"work.tag":"Válogatott munkák","work.h":"Hallgasd meg.","work.p":"Kattints egy kártyára, és itt helyben megnézheted a videót. Feldolgozások, hangszerelések, közös projektek.",
+"w1.p":"Egy korszak hangja és az időtlen „gospodski” dalok, Vlado Georgiev szellemében. 🎩","w2.p":"Dario Bratić projektje — gitáron játszottam, a @drumremixforyou dobossal és Davor Bratić-tyal.","w3.p":"Saját hangszerelésű feldolgozás a 2007-es Eurovízió-győztes énekesnő dalából.","w4.p":"Gitár + dob feldolgozás a @drumremixforyou közreműködésével, a legendás Toše emlékére.","w5.p":"Tijana Bogićević egyik legszebb dala, filmzenés, nagyívű hangszerelésben. ☺️","w6.p":"Tíz nap, leírhatatlan élmény és egy életre szóló emlék nemzetközi zenésztársakkal. ❤️",
+"m.keys":"Billentyű","m.band":"Zenekar","m.prod":"Produkció","m.guitar":"Gitár","m.arr":"Hangszerelés","m.intl":"Nemzetközi",
+"col.tag":"Együttműködések","col.h":"Akikkel<br>zenéltem.","col.p":"Zenészek, producerek és projektek, akikkel közös munkák születtek.",
+"col.1s":"Producer · keverőmérnök","col.1p":"Főállású producer, keverő- és FOH-mérnök, zongorista. Közös cover-projekt 2025-ben.","col.2s":"Dobos","col.2p":"Dob remixek YouTube-on — közös Toše Proeski és Tijana Bogićević feldolgozások.","col.3s":"Inspiráció","col.3p":"Szerbia 2017-es eurovíziós előadója — két feldolgozás is készült a dalaiból.","col.4p":"Nemzetközi békeépítő zenei projekt fiatal zenészeknek és alkotóknak.",
+"mm.h":"Zene a háború helyett.","mm.p":"A Make Music Not War egy Erasmus+ által támogatott, a németországi NaturKultur e.V. által szervezett projekt. Konfliktusokkal érintett régiókból — többek között Szerbiából, Koszovóból, Bosznia-Hercegovinából, Horvátországból, Görögországból, Izraelből és Palesztinából — érkező fiatal zenészek vegyes zenekarokat alkotnak, saját dalokat írnak, vesznek fel, és békekoncerteken lépnek fel.",
+"mm.q":"„Leírhatatlan érzés, élmény és örök emlék, amit ez a tíz nap adott.” — Lénárd",
+"svc.tag":"Szolgáltatások","svc.h":"Mit csinálok<br>neked?","svc.p":"„Get your music ideas come to life.” — hozd az ötletet, a többit együtt megcsináljuk.",
+"s1.h":"Zene rendelésre","s1.p":"Alap, beat vagy teljes instrumentál a te stílusodban, akár egy dúdolt dallamból.","s2.h":"Keverés & mastering","s2.p":"Tiszta, erős, modern mix — hogy a dalod minden lejátszón jól szóljon.","s3.h":"Session gitár","s3.p":"Akusztikus és elektromos gitársávok a dalodra, stúdióban vagy online.","s4.h":"Ének- és hangszerfelvétel","s4.p":"Felvétel a stúdió csendes vokálszobájában, Universal Audio mikrofonnal.","s5.h":"Cover & cinematic verziók","s5.p":"Ismert dalok újragondolva — feldolgozás közösségi médiára vagy fellépésre.","s6.h":"Élő zenélés","s6.p":"Gitáros zenekarba, rendezvényre, koncertre vagy felvételre.",
+"pk.tag":"Csomagok","pk.h":"Válaszd ki,<br>mi kell neked.","pk.p":"Irányárak euróban. Minden dal más — írj, és a te projektedre szabott, fix ajánlatot kapsz.","pk.btn":"Ezt kérem","pk.hot":"Legnépszerűbb","per.song":"/ dal-tól","per.track":"/ sáv-tól",
+"pk1.for":"Megvan a felvétel, csak profin kell szólnia.","pk1.ul":"<li>Keverés + mastering</li><li>Max. 24 sáv</li><li>2 kör javítás</li><li>WAV + MP3 export</li>",
+"pk2.for":"Egyedi alap a dalodhoz, rapedhez vagy videódhoz.","pk2.ul":"<li>Egyedi instrumentál a stílusodban</li><li>Élő gitár igény szerint</li><li>Stemek (külön sávok)</li><li>3 kör javítás</li>",
+"pk3.for":"Ötlettől a kész dalig — mindent elintézünk.","pk3.ul":"<li>Zene rendelésre + hangszerelés</li><li>Élő gitár- és billentyűsávok</li><li>Ének felvétele a stúdióban</li><li>Keverés + mastering</li><li>Korlátlan egyeztetés</li>",
+"pk4.for":"Gitár kell a dalodba? Felveszem, ahogy elképzelted.","pk4.ul":"<li>Akusztikus vagy elektromos gitár</li><li>Stúdióban vagy online</li><li>Külön sávok (stemek)</li><li>2 kör javítás</li>",
+"pk.note":"Élő fellépés, cover vagy egyedi ötlet? <a href=\"#kapcsolat\">Írj, és összerakunk egy saját csomagot →</a>",
+"st.tag":"Hogyan dolgozunk","st.h":"Négy lépés.","st1.h":"Megbeszélés","st1.p":"Elmondod az ötletet, küldesz referenciát — akár egy hangüzenetet.","st2.h":"Ajánlat","st2.p":"Kiválasztjuk a csomagot, és fix árat, határidőt adok.","st3.h":"Stúdiómunka","st3.p":"Produkció, felvétel, keverés — közben küldöm a demókat.","st4.h":"Kész dal","st4.p":"Javítások után megkapod a végleges, kiadásra kész fájlokat.",
+"sd.tag":"A stúdió","sd.h":"Lenny Production.","sd.p":"Saját stúdió külön vokálszobával a csendet igénylő ének- és hangszerfelvételekhez, plusz rengeteg hangszer, hogy a legjobbat hozzuk ki a zenédből. 🎧🎹🎤","sd.booth":"Vokálszoba","g.mic":"Mikrofon","g.synth":"Szintetizátor",
+"lv.h":"Színpadon is otthon.","lv.p":"Session gitárosként zenekarokkal lépek fel élőben — koncerteken, rendezvényeken, közös projektekben. Kell egy gitáros a bandába?","lv.btn":"Foglalj gitárost",
+"ct.tag":"Kapcsolat","ct.h":"Csináljunk<br>együtt zenét.","ct.card":"Van egy ötleted? Hívj vagy írj bátran. 📞",
+"f.name":"Neved","f.contact":"Elérhetőség (telefon / e-mail)","f.pack":"Melyik csomag érdekel?","f.custom":"Egyedi","f.genre":"Stílus / műfaj","f.deadline":"Határidő","f.msg":"Mesélj a projektről","f.wa":"💬 Küldés WhatsAppon","f.viber":"Küldés Viberen",
+"modal.open":"Megnyitás Instagramon ↗",
+"msg":["Szia Lénárd! 👋","Név","Elérhetőség","Csomag","Stílus","Határidő"],
+"packs":{mix:"Mix & Master (€60-tól)",beat:"Beat / Instrumental (€120-tól)",full:"Full Production (€290-tól)",guitar:"Session Guitar (€35-tól)",live:"Élő fellépés",custom:"Egyedi projekt"}
+},
+sr:{
+"nav.about":"O meni","nav.work":"Radovi","nav.packs":"Paketi","nav.studio":"Studio","nav.contact":"Kontakt","nav.cta":"Piši mi",
+"hero.lead":"Tvoja ideja zaslužuje da <b>zvuči baš onako</b> kako je čuješ u glavi. Muzika po narudžbini, miks, snimanje gitare i kompletna produkcija — iz studija <b>Lenny Production</b>. 🪄",
+"hero.listen":"▶ Poslušaj moje radove","hero.packs":"Paketi i cene","hero.now":"Producent · gitarista · Lenny Prod",
+"chip.1":"🎧 Miks","chip.2":"🎸 Session gitara","chip.3":"🎹 Aranžman","chip.4":"🎬 Cinematic verzije",
+"about.tag":"O meni","about.h":"Mlado uvo,<br>ozbiljan zvuk.","about.cap":"👋 Ćao, ja sam Lenard — producent i gitarista.",
+"about.p1":"Ja sam <b>muzički producent i session gitarista</b>. Radim u svom studiju <b>Lenny Production</b>, gde od pevušene ideje ili demo snimka nastaje gotova pesma spremna za objavu.",
+"about.p2":"Obožavam klasike balkanskog popa: radio sam obrade pesama <b>Toše Proeskog</b>, <b>Marije Šerifović</b> i <b>Tijane Bogićević</b>, a na <b>Korg Triton</b>u oživljavam zvuk „gospodske” ere. Kao gitarista sviram u studiju i na sceni u produkcijama drugih muzičara.",
+"about.p3":"2025. sam deset dana svirao sa mladim muzičarima iz Evrope i sa Bliskog istoka na međunarodnom programu <b>Make Music Not War</b> — jedno od najvažnijih iskustava u mom životu.",
+"stat.1":"uloge: producent i session gitarista","stat.2":"pratilaca na Instagramu","stat.3":"mladih muzičara na Make Music Not War","stat.4":"DAW-a: Logic Pro X i FL Studio",
+"work.tag":"Izabrani radovi","work.h":"Poslušaj.","work.p":"Klikni na karticu i pogledaj video ovde. Obrade, aranžmani, zajednički projekti.",
+"w1.p":"Zvuk jedne ere i bezvremenskih gospodskih pesama, u duhu Vlade Georgieva. 🎩","w2.p":"Projekat Darija Bratića — svirao sam gitaru, sa @drumremixforyou na bubnjevima i Davorom Bratićem.","w3.p":"Obrada u mom aranžmanu, pesma pobednice Evrovizije 2007.","w4.p":"Gitara + bubanj obrada sa @drumremixforyou, u znak sećanja na legendarnog Tošeta.","w5.p":"Jedna od najomiljenijih pesama Tijane Bogićević, zrela za jednu cinematic verziju. ☺️","w6.p":"Deset dana, neopisiv osećaj i večna uspomena sa muzičarima iz celog sveta. ❤️",
+"m.keys":"Klavijature","m.band":"Bend","m.prod":"Produkcija","m.guitar":"Gitara","m.arr":"Aranžman","m.intl":"Međunarodno",
+"col.tag":"Saradnje","col.h":"Sa kim sam<br>svirao.","col.p":"Muzičari, producenti i projekti sa kojima su nastali zajednički radovi.",
+"col.1s":"Producent · mix inženjer","col.1p":"Producent, mix i FOH inženjer, pijanista. Zajednička obrada 2025.","col.2s":"Bubnjar","col.2p":"Drum remiksi na YouTube-u — zajedničke obrade Tošeta i Tijane.","col.3s":"Inspiracija","col.3p":"Predstavnica Srbije na Evroviziji 2017 — dve obrade njenih pesama.","col.4p":"Međunarodni mirovni muzički projekat za mlade muzičare i stvaraoce.",
+"mm.h":"Muzika umesto rata.","mm.p":"Make Music Not War je Erasmus+ projekat koji organizuje NaturKultur e.V. iz Nemačke. Mladi muzičari iz regiona pogođenih konfliktima — između ostalog iz Srbije, Kosova, Bosne i Hercegovine, Hrvatske, Grčke, Izraela i Palestine — formiraju mešovite bendove, pišu i snimaju svoje pesme i nastupaju na koncertima za mir.",
+"mm.q":"„Neopisiv osećaj, iskustvo i večna uspomena koju mi je dalo ovih deset dana.” — Lenard",
+"svc.tag":"Usluge","svc.h":"Šta radim<br>za tebe?","svc.p":"„Get your music ideas come to life.” — donesi ideju, ostalo radimo zajedno.",
+"s1.h":"Muzika po narudžbini","s1.p":"Matrica, beat ili ceo instrumental u tvom stilu, čak i iz pevušene melodije.","s2.h":"Miks i mastering","s2.p":"Čist, jak, moderan miks — da tvoja pesma zvuči dobro svuda.","s3.h":"Session gitara","s3.p":"Akustične i električne gitare za tvoju pesmu, u studiju ili online.","s4.h":"Snimanje vokala i instrumenata","s4.p":"Snimanje u tihoj vokalnoj kabini, sa Universal Audio mikrofonom.","s5.h":"Obrade i cinematic verzije","s5.p":"Poznate pesme u novom ruhu — za društvene mreže ili nastup.","s6.h":"Sviranje uživo","s6.p":"Gitarista za bend, događaj, koncert ili snimanje.",
+"pk.tag":"Paketi","pk.h":"Izaberi šta<br>ti treba.","pk.p":"Okvirne cene u evrima. Svaka pesma je drugačija — piši mi i dobićeš fiksnu ponudu za tvoj projekat.","pk.btn":"Hoću ovo","pk.hot":"Najpopularnije","per.song":"/ pesma, od","per.track":"/ snimak, od",
+"pk1.for":"Imaš snimak, samo treba da zvuči profesionalno.","pk1.ul":"<li>Miks + mastering</li><li>Do 24 kanala</li><li>2 kruga izmena</li><li>WAV + MP3</li>",
+"pk2.for":"Originalna matrica za tvoju pesmu, rep ili video.","pk2.ul":"<li>Instrumental u tvom stilu</li><li>Živa gitara po želji</li><li>Stemovi (posebni kanali)</li><li>3 kruga izmena</li>",
+"pk3.for":"Od ideje do gotove pesme — sve rešavamo.","pk3.ul":"<li>Muzika po narudžbini + aranžman</li><li>Žive gitare i klavijature</li><li>Snimanje vokala u studiju</li><li>Miks + mastering</li><li>Neograničene konsultacije</li>",
+"pk4.for":"Treba ti gitara u pesmi? Snimiću je kako si zamislio.","pk4.ul":"<li>Akustična ili električna gitara</li><li>U studiju ili online</li><li>Stemovi</li><li>2 kruga izmena</li>",
+"pk.note":"Nastup uživo, obrada ili posebna ideja? <a href=\"#kapcsolat\">Piši mi i napravićemo paket po meri →</a>",
+"st.tag":"Kako radimo","st.h":"Četiri koraka.","st1.h":"Dogovor","st1.p":"Ispričaš ideju, pošalješ referencu — može i glasovna poruka.","st2.h":"Ponuda","st2.p":"Biramo paket, dobijaš fiksnu cenu i rok.","st3.h":"Rad u studiju","st3.p":"Produkcija, snimanje, miks — usput ti šaljem demo verzije.","st4.h":"Gotova pesma","st4.p":"Posle izmena dobijaš finalne fajlove spremne za objavu.",
+"sd.tag":"Studio","sd.h":"Lenny Production.","sd.p":"Sopstveni studio sa vokalnom kabinom za snimanja kojima treba tišina, i mnogo instrumenata da izvučemo najbolje iz tvoje muzike. 🎧🎹🎤","sd.booth":"Vokalna kabina","g.mic":"Mikrofon","g.synth":"Sintisajzer",
+"lv.h":"I na sceni kao kod kuće.","lv.p":"Kao session gitarista nastupam uživo sa bendovima — na koncertima, događajima i zajedničkim projektima. Treba ti gitarista za bend?","lv.btn":"Rezerviši gitaristu",
+"ct.tag":"Kontakt","ct.h":"Hajde da pravimo<br>muziku zajedno.","ct.card":"Imaš ideju? Slobodno pozovi ili piši. 📞",
+"f.name":"Ime","f.contact":"Kontakt (telefon / e-mail)","f.pack":"Koji paket te zanima?","f.custom":"Po meri","f.genre":"Stil / žanr","f.deadline":"Rok","f.msg":"Ispričaj mi o projektu","f.wa":"💬 Pošalji na WhatsApp","f.viber":"Pošalji na Viber",
+"modal.open":"Otvori na Instagramu ↗",
+"msg":["Ćao Lenarde! 👋","Ime","Kontakt","Paket","Stil","Rok"],
+"packs":{mix:"Mix & Master (od €60)",beat:"Beat / Instrumental (od €120)",full:"Full Production (od €290)",guitar:"Session Guitar (od €35)",live:"Nastup uživo",custom:"Projekat po meri"}
+},
+en:{
+"nav.about":"About","nav.work":"Work","nav.packs":"Packages","nav.studio":"Studio","nav.contact":"Contact","nav.cta":"Get in touch",
+"hero.lead":"Your idea deserves to <b>sound exactly</b> the way you hear it in your head. Music by order, mixing, guitar recording and full production — straight from <b>Lenny Production</b> studio. 🪄",
+"hero.listen":"▶ Listen to my work","hero.packs":"Packages & prices","hero.now":"Producer · guitarist · Lenny Prod",
+"chip.1":"🎧 Mixing","chip.2":"🎸 Session guitar","chip.3":"🎹 Arrangement","chip.4":"🎬 Cinematic versions",
+"about.tag":"About","about.h":"Young ears,<br>serious sound.","about.cap":"👋 Hi, I'm Lénárd — producer and guitarist.",
+"about.p1":"I'm a <b>music producer and session guitarist</b>. I work in my own studio, <b>Lenny Production</b>, where a hummed idea or a rough demo becomes a finished, release-ready song.",
+"about.p2":"I love Balkan pop classics: I've made covers of songs by <b>Toše Proeski</b>, <b>Marija Šerifović</b> and <b>Tijana Bogićević</b>, and on the <b>Korg Triton</b> I bring back the sound of the “gospodski” era. As a guitarist I play on other artists' productions, in the studio and on stage.",
+"about.p3":"In 2025 I spent ten days making music with young musicians from Europe and the Middle East at the international <b>Make Music Not War</b> programme — one of the most defining experiences of my life.",
+"stat.1":"roles: producer & session guitarist","stat.2":"followers on Instagram","stat.3":"young musicians at Make Music Not War","stat.4":"DAWs: Logic Pro X & FL Studio",
+"work.tag":"Selected work","work.h":"Have a listen.","work.p":"Click a card to watch the video right here. Covers, arrangements, collaborations.",
+"w1.p":"The sound of an era and timeless “gospodski” songs, in the spirit of Vlado Georgiev. 🎩","w2.p":"Dario Bratić's project — I played guitar alongside @drumremixforyou on drums and Davor Bratić.","w3.p":"My own arrangement of a song by the 2007 Eurovision winner.","w4.p":"Guitar + drums cover with @drumremixforyou, in memory of the legendary Toše.","w5.p":"One of Tijana Bogićević's most beloved songs, reimagined as a cinematic version. ☺️","w6.p":"Ten days, an indescribable feeling and a lifelong memory with musicians from all over. ❤️",
+"m.keys":"Keys","m.band":"Band","m.prod":"Production","m.guitar":"Guitar","m.arr":"Arrangement","m.intl":"International",
+"col.tag":"Collaborations","col.h":"Who I've<br>played with.","col.p":"Musicians, producers and projects I've created music with.",
+"col.1s":"Producer · mixing engineer","col.1p":"Full-time producer, mixing & FOH engineer, pianist. Joint cover project in 2025.","col.2s":"Drummer","col.2p":"Drum remixes on YouTube — joint Toše Proeski and Tijana Bogićević covers.","col.3s":"Inspiration","col.3p":"Serbia's Eurovision 2017 representative — two covers of her songs.","col.4p":"International peace-building music project for young musicians and creators.",
+"mm.h":"Music instead of war.","mm.p":"Make Music Not War is an Erasmus+ funded project run by NaturKultur e.V. in Germany. Young musicians from conflict-affected regions — including Serbia, Kosovo, Bosnia and Herzegovina, Croatia, Greece, Israel and Palestine — form mixed bands, write and record their own songs, and perform at peace concerts.",
+"mm.q":"“An indescribable feeling, experience and an eternal memory that these ten days gave me.” — Lénárd",
+"svc.tag":"Services","svc.h":"What can I<br>do for you?","svc.p":"“Get your music ideas come to life.” — bring the idea, we'll build the rest together.",
+"s1.h":"Music by order","s1.p":"A beat, backing track or full instrumental in your style — even from a hummed melody.","s2.h":"Mixing & mastering","s2.p":"Clean, punchy, modern mixes that sound great on every speaker.","s3.h":"Session guitar","s3.p":"Acoustic and electric guitar parts for your song, in studio or remote.","s4.h":"Vocal & instrument recording","s4.p":"Recording in a quiet vocal booth with a Universal Audio mic.","s5.h":"Covers & cinematic versions","s5.p":"Well-known songs reimagined — for social media or live shows.","s6.h":"Live playing","s6.p":"Guitarist for your band, event, concert or recording.",
+"pk.tag":"Packages","pk.h":"Pick what<br>you need.","pk.p":"Starting prices in euro. Every song is different — message me for a fixed quote tailored to your project.","pk.btn":"I want this","pk.hot":"Most popular","per.song":"/ song, from","per.track":"/ track, from",
+"pk1.for":"You've got the recording — it just needs to sound pro.","pk1.ul":"<li>Mixing + mastering</li><li>Up to 24 tracks</li><li>2 revision rounds</li><li>WAV + MP3</li>",
+"pk2.for":"An original beat for your song, rap or video.","pk2.ul":"<li>Custom instrumental in your style</li><li>Live guitar on request</li><li>Stems included</li><li>3 revision rounds</li>",
+"pk3.for":"From idea to finished song — all handled.","pk3.ul":"<li>Music by order + arrangement</li><li>Live guitars and keys</li><li>Vocal recording in studio</li><li>Mixing + mastering</li><li>Unlimited consultation</li>",
+"pk4.for":"Need guitar on your track? I'll record it the way you imagine.","pk4.ul":"<li>Acoustic or electric guitar</li><li>In studio or remote</li><li>Separate stems</li><li>2 revision rounds</li>",
+"pk.note":"Live show, cover or a custom idea? <a href=\"#kapcsolat\">Message me and we'll build your own package →</a>",
+"st.tag":"How we work","st.h":"Four steps.","st1.h":"Talk","st1.p":"Tell me the idea, send a reference — even a voice message works.","st2.h":"Quote","st2.p":"We pick a package; you get a fixed price and deadline.","st3.h":"Studio time","st3.p":"Production, recording, mixing — with demos along the way.","st4.h":"Finished song","st4.p":"After revisions you get final, release-ready files.",
+"sd.tag":"The studio","sd.h":"Lenny Production.","sd.p":"My own studio with a vocal booth for recordings that need silence, plus plenty of instruments to get the best out of your music. 🎧🎹🎤","sd.booth":"Vocal booth","g.mic":"Microphone","g.synth":"Synth",
+"lv.h":"At home on stage too.","lv.p":"As a session guitarist I play live with bands — concerts, events and collaborations. Need a guitarist for your band?","lv.btn":"Book a guitarist",
+"ct.tag":"Contact","ct.h":"Let's make<br>music together.","ct.card":"Got an idea? Call or message me anytime. 📞",
+"f.name":"Your name","f.contact":"Contact (phone / e-mail)","f.pack":"Which package are you interested in?","f.custom":"Custom","f.genre":"Style / genre","f.deadline":"Deadline","f.msg":"Tell me about the project","f.wa":"💬 Send via WhatsApp","f.viber":"Send via Viber",
+"modal.open":"Open on Instagram ↗",
+"msg":["Hi Lénárd! 👋","Name","Contact","Package","Style","Deadline"],
+"packs":{mix:"Mix & Master (from €60)",beat:"Beat / Instrumental (from €120)",full:"Full Production (from €290)",guitar:"Session Guitar (from €35)",live:"Live gig",custom:"Custom project"}
+}};
+
+let lang='hu';
+function setLang(l){
+  lang=T[l]?l:'hu';document.documentElement.lang=lang==='sr'?'sr-Latn':lang;
+  document.querySelectorAll('[data-i]').forEach(el=>{const v=T[lang][el.dataset.i];if(typeof v==='string')el.innerHTML=v});
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===lang));
+  try{localStorage.setItem('lang',lang)}catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+let initial='hu';
+try{initial=localStorage.getItem('lang')||''}catch(e){}
+if(!initial){const n=(navigator.language||'').toLowerCase();initial=/^(sr|hr|bs|me)/.test(n)?'sr':/^hu/.test(n)?'hu':/^en/.test(n)?'en':'hu'}
+setLang(initial);
+
+const eq=document.getElementById('eq');
+for(let i=0;i<28;i++){const b=document.createElement('i');b.style.animationDelay=(-Math.random()*1.1).toFixed(2)+'s';b.style.animationDuration=(0.7+Math.random()*0.8).toFixed(2)+'s';eq.appendChild(b)}
+const player=document.getElementById('player'),pt=document.getElementById('playToggle');
+pt.onclick=()=>{const p=player.classList.toggle('paused');pt.textContent=p?'▶':'❚❚'};
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const modal=document.getElementById('modal'),frame=document.getElementById('frame'),igLink=document.getElementById('igLink');
+document.querySelectorAll('.work').forEach(w=>w.onclick=()=>{const u=w.dataset.ig;frame.src=u+'embed';igLink.href=u;modal.classList.add('open')});
+const close=()=>{modal.classList.remove('open');frame.src='about:blank'};
+document.getElementById('close').onclick=close;
+modal.onclick=e=>{if(e.target===modal)close()};
+addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+
+document.querySelectorAll('[data-pack]').forEach(b=>b.onclick=()=>{
+  const r=document.getElementById('p-'+b.dataset.pack);if(r)r.checked=true;
+  document.getElementById('kapcsolat').scrollIntoView();
+});
+
+const PHONE='381653531017';
+function compose(){
+  const f=new FormData(document.getElementById('form')),m=T[lang].msg;
+  return `${m[0]}\n${m[1]}: ${f.get('name')||'-'}\n${m[2]}: ${f.get('contact')||'-'}\n${m[3]}: ${T[lang].packs[f.get('pack')]||'-'}\n${m[4]}: ${f.get('genre')||'-'}\n${m[5]}: ${f.get('deadline')||'-'}\n\n${f.get('msg')||''}`;
+}
+document.getElementById('form').onsubmit=e=>{e.preventDefault();window.open('https://wa.me/'+PHONE+'?text='+encodeURIComponent(compose()),'_blank')};
+document.getElementById('viber').onclick=()=>{
+  if(!document.getElementById('form').reportValidity())return;
+  location.href='viber://chat?number=%2B'+PHONE+'&draft='+encodeURIComponent(compose());
+};
+</script>
+</body>
+</html>
